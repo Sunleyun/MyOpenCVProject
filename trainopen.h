@@ -1,9 +1,10 @@
 #ifndef TRAINOPEN_H
 #define TRAINOPEN_H
-
 #include <opencv2/opencv.hpp>
+using namespace std;
 
-// 将图像转换为灰度并返回
 cv::Mat convertToGray(const cv::Mat& input);
+
+void Main_Opencv();
 
 #endif // TRAINOPEN_H

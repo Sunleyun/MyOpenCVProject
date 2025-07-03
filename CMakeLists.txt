@@ -12,7 +12,13 @@ find_package(OpenCV REQUIRED PATHS "D:/opencv/build") # 替换为你的OpenCV安
 include_directories(${OpenCV_INCLUDE_DIRS})
 
 # 创建可执行文件
-add_executable(MyOpenCVProject main.cpp trainc.cpp trainopen.cpp)
+add_executable(MyOpenCVProject 
+	main.cpp 
+	trainc.cpp 
+	trainopen.cpp
+	trainc.h
+	trainopen.h
+)
 
 # 链接OpenCV库
 target_link_libraries(MyOpenCVProject ${OpenCV_LIBS})
