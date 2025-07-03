@@ -1,0 +1,33 @@
+/build/
+
+# 忽略 Visual Studio 生成的临时文件
+*.suo 
+*.user
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+Debug/
+Release/
+x64/
+*.tlog
+*.log
+*.idb
+*.pdb
+
+# 忽略 CMake 缓存文件
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+
+# 忽略其他临时文件
+*.o
+*.obj
+*.exe
+*.ilk
+*.manifest
+*.dependers
+*.layout
+
+# 可选：忽略测试图像（如果你不想上传 test.jpg）
+# test.jpg
