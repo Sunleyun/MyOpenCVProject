@@ -17,9 +17,15 @@ cv::Mat gammaTransform(const cv::Mat& img, float gamma) {
     return result;
 }
 
+cv::Mat Blur_Gaussian(const cv::Mat& img, int kernal, double param) {
+    cv::Mat result;
+    cv::GaussianBlur(img, result, cv::Size(kernal, kernal), param);
+    return result;
+}
+
 void Main_Opencv() {
     string img_path = "D:/1_SLYwork/project/train/MyOpenCVProject/00005.png";
-    string save_path = "D:/1_SLYwork/project/train/MyOpenCVProject/00005_gamma_05.png";
+    string save_path = "D:/1_SLYwork/project/train/MyOpenCVProject/00005_gaussian_blur.png";
 
     cv::Mat image = cv::imread(img_path);
     if (image.empty()) {
@@ -27,9 +33,9 @@ void Main_Opencv() {
         return;
     }
 
-    cv::Mat grayImage = convertToGray(image);
-    grayImage = gammaTransform(grayImage, 05);
-    cv::imwrite(save_path, grayImage);
+    //cv::Mat grayImage = convertToGray(image);
+    cv::Mat blur_image = Blur_Gaussian(image, 5, 1.0);
+    cv::imwrite(save_path, blur_image);
 
     //cv::imshow("Test Image", grayImage);
     //cv::waitKey(0);

@@ -12,8 +12,31 @@ public:
 	Point(double, double);
 	Point operator+(const Point&) const;
 	void show();
+	~Point() = default;
 private:
 	double x, y;
+};
+
+class Shape {
+public:
+	virtual double area() const = 0;
+	virtual ~Shape() {}
+};
+
+class Circle : public Shape {
+public:
+	Circle(double);
+	double area() const override;
+private:
+	double radius;
+};
+
+class Rectangle : public Shape {
+public:
+	Rectangle(double, double);
+	double area() const override;
+private:
+	double w, h;
 };
 
 void Main_C();

@@ -22,9 +22,21 @@ void Point::show() {
 	cout << x << " " << y << endl;
 }
 
+Circle::Circle(double r): radius(r) {}
+
+double Circle::area() const {
+	return 3.14 * radius * radius;
+}
+
+Rectangle::Rectangle(double _w, double _h): w(_w), h(_h) {}
+
+double Rectangle::area() const {
+	return w * h;
+}
+
 void Main_C() {
-	Point p1(2, 5);
-	Point p2(3, 6);
-	p1 = p1 + p2;
-	p1.show();
+	Circle c1(4);
+	cout << c1.area() << endl;
+	Rectangle r1(4, 5);
+	cout << r1.area() << endl;
 }
