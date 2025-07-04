@@ -5,6 +5,6 @@
 using namespace std;
 
 int main() {
-    Main_C();
+    Main_Opencv();
     return 0;
 }

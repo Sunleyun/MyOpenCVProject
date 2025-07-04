@@ -42,5 +42,5 @@ MyOpenCVProject
  - `main.cpp`: Tests both functions and displays results.
 
  ## Notes
- - Ensure `test.jpg` is in the project root or adjust the path in `main.cpp`.
+ - Ensure `00005.png` is in the project root or adjust the path in your customized path.
  - If running outside Visual Studio, copy `opencv_world4110.dll` to the executable directory or add it to `PATH`.

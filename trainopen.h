@@ -4,6 +4,7 @@
 using namespace std;
 
 cv::Mat convertToGray(const cv::Mat& input);
+cv::Mat gammaTransform(const cv::Mat& img, float gamma);
 
 void Main_Opencv();
 
