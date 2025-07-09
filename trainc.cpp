@@ -1,4 +1,5 @@
 #include "trainc.h"
+using namespace std;
 
 void swap_reference(int& a, int& b) {
 	int temp = a;
@@ -12,10 +13,18 @@ void swap_pointer(int* a, int* b) {
 	*b = temp;
 }
 
+void reverseArray(vector<int>& vec) {
+	reverse(vec.begin(), vec.end());
+}
+
 Point::Point(double x_, double y_): x(x_), y(y_) {}
 
 Point Point::operator+(const Point& other) const {
 	return Point(x + other.x, y + other.y);
+}
+
+double Point::distance() const {
+	return sqrt(x * x + y * y);
 }
 
 void Point::show() {
@@ -35,8 +44,8 @@ double Rectangle::area() const {
 }
 
 void Main_C() {
-	Circle c1(4);
-	cout << c1.area() << endl;
-	Rectangle r1(4, 5);
-	cout << r1.area() << endl;
+	vector<Point> vec = { {1, 1}, {2, 2}, {3, 3} };
+	for (const auto& p : vec) {
+		cout << p.distance() << " ";
+	}
 }

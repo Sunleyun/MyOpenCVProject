@@ -1,16 +1,20 @@
 #ifndef TRAINC_H
 #define TRAINC_H
 #include <iostream>
-using namespace std;
+#include <algorithm>
+#include <vector>
+#include <functional>
 
 void swap_reference(int &a, int &b);
 void swap_pointer(int *a, int *b);
+void reverseArray(std::vector<int>& vec);
 
 class Point {
 public:
 	Point() = default;
 	Point(double, double);
 	Point operator+(const Point&) const;
+	double distance() const;
 	void show();
 	~Point() = default;
 private:
