@@ -20,5 +20,5 @@ add_executable(MyOpenCVProject
 	trainopen.h
 )
 
-# 链接OpenCV库
+# 链接OpenCV库/PCL库
 target_link_libraries(MyOpenCVProject ${OpenCV_LIBS})
